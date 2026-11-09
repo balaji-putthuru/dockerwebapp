@@ -13,7 +13,7 @@ services:
   application:
     image: balajiputhuru/automation:app
     ports:
-      - "1111:8080"
+      - "2222:8080"
     depends_on:
       - devopsdb
     deploy:
