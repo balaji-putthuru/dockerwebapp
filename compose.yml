@@ -5,6 +5,8 @@ services:
     image: balajiputhuru/automation:db
     ports:
       - "3306:3306"
+    deploy:
+      replicas: 3
     networks:
       - mynetwork
 
@@ -14,6 +16,8 @@ services:
       - "1111:8080"
     depends_on:
       - devopsdb
+    deploy:
+      replicas: 3
     networks:
       - mynetwork
 
