@@ -2,16 +2,16 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: shaikmustafa/flm-oct:db
+    image: balajiputhuru/automation:db
     ports:
       - "3306:3306"
     deploy:
-      replicas: 1
+      replicas: 3
     networks:
       - mynetwork
 
   application:
-    image: shaikmustafa/flm-oct:javaapp
+    image: balajiputhuru/automation:app
     ports:
       - "1111:8080"
     deploy:
